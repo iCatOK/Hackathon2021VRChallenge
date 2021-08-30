@@ -23,6 +23,7 @@ public class PotionReceiver : MonoBehaviour
         if(AcceptedPotionType.Contains(PotionType))
         {
             OnPotionPoured.Invoke(PotionType);
+
             //correctPoured = true;
         }                      
     }

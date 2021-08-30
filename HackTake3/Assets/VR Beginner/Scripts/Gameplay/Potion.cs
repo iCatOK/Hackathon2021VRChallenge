@@ -104,7 +104,13 @@ public class Potion : MonoBehaviour
                 if (receiver != null)
                 {
                     receiver.ReceivePotion(PotionType);
-                    receiver.fillPotion(spoiledLiquid);
+                }
+
+                FlowerColorChanger changer = hit.collider.GetComponent<FlowerColorChanger>();
+                
+                if (changer != null)
+                {
+                    changer.AddLiquid(PotionType);
                 }
             }
 
@@ -198,5 +204,15 @@ public class Potion : MonoBehaviour
             Destroy(SmashedObject, 4.0f);
             Destroy(this);
         }      
+    }
+
+    public void AddAmount()
+    {
+
+        fillAmount += 0.1f * Time.deltaTime;
+        
+        MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock);
+        m_MaterialPropertyBlock.SetFloat("LiquidFill", fillAmount);
+        MeshRenderer.SetPropertyBlock(m_MaterialPropertyBlock);
     }
 }
