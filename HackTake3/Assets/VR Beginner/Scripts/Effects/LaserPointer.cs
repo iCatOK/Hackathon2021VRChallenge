@@ -9,21 +9,18 @@ namespace VRBeginer
     public class LaserPointer : MonoBehaviour
     {
         LineRenderer m_LineRenderer;
-
-        bool m_IsOn;
         
         Balloon lastBalloon;
         
         void Start()
         {
             m_LineRenderer = GetComponent<LineRenderer>();
-            m_IsOn = false;
         }
 
         void Update()
         {
             RaycastHit info;
-            if (Physics.Raycast(transform.position, transform.up, out info, 100.0f, ~0, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(transform.position, transform.up, out info, 100.0f, 7, QueryTriggerInteraction.Ignore))
             {
                 Balloon newBalloon = info.collider.gameObject.GetComponent<Balloon>();
 
