@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8954011481188552938}
   - component: {fileID: 8954011481188552939}
   - component: {fileID: 8954011481188552936}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LaserTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e222dbc97a43bbd41adc4f857de98ae1, type: 2}
+  - {fileID: 2100000, guid: 3eca276b76cdedf4b82a4ae5afde4bb3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b407e51a72ed13a48861ca61cdad8b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Score: 5
+  timeUntilExplode: 1
+  OnBalloonExplode:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &8954011481188552936
 Rigidbody:
   m_ObjectHideFlags: 0
