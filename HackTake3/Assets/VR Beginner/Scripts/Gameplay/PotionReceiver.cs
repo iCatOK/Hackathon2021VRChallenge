@@ -26,4 +26,9 @@ public class PotionReceiver : MonoBehaviour
             correctPoured = true;
         }                      
     }
+
+    internal void fillPotion(float spoiledLiquid)
+    {
+        return; //vessel
+    }
 }

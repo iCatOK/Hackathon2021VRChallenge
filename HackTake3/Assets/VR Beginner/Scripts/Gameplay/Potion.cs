@@ -80,6 +80,7 @@ public class Potion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //если начинаем лить
         if (Vector3.Dot(transform.up, Vector3.down) > 0 && fillAmount > 0 && m_PlugIn == false)
         {
             if (particleSystemLiquid.isStopped)
@@ -88,7 +89,8 @@ public class Potion : MonoBehaviour
                 m_AudioSource.Play();
             }
             
-            fillAmount -= 0.1f * Time.deltaTime;
+            float spoiledLiquid = 0.1f * Time.deltaTime;
+            fillAmount -= spoiledLiquid;
 
             float fillRatio = fillAmount / m_StartingFillAmount;
 
@@ -102,6 +104,7 @@ public class Potion : MonoBehaviour
                 if (receiver != null)
                 {
                     receiver.ReceivePotion(PotionType);
+                    receiver.fillPotion(spoiledLiquid);
                 }
             }
 
