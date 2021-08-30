@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7599086042203129850}
   - component: {fileID: 1036585741718078252}
   - component: {fileID: 9219508812850445224}
+  - component: {fileID: 2128173145}
   m_Layer: 0
   m_Name: ship 1
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 7750796456761296677}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 13.763, y: 0.606, z: 9.223}
-  m_LocalScale: {x: -16.73504, y: -7.774275, z: -2.219084}
+  m_LocalScale: {x: 16, y: 7, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -223,4 +224,30 @@ MonoBehaviour:
   - Soap
   OnPotionPoured:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2128173145}
+        m_TargetAssemblyTypeName: Boat, Assembly-CSharp
+        m_MethodName: OnSoapEnter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Soap
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2128173145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750796456761296677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59deaa0dc69518648a7c72686233ec01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soapVelocity: 10
+  isLeftAxis: 1

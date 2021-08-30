@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1165150399915576260}
   - component: {fileID: 919132149045412479}
   - component: {fileID: 6955673000718495163}
-  - component: {fileID: 2775636335617407794}
   m_Layer: 0
   m_Name: ship_soap_NEW
   m_TagString: Untagged
@@ -251,15 +250,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soapVelocity: 0
---- !u!114 &2775636335617407794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154830198934780972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ec6fcca20f7e44d9349c1f633c0ef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

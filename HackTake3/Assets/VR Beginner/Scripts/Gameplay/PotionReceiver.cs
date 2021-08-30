@@ -9,7 +9,7 @@ using UnityEngine.Events;
 /// </summary>
 public class PotionReceiver : MonoBehaviour
 {
-    private bool correctPoured = false;
+    //private bool correctPoured = false;
 
     [System.Serializable]
     public class PotionPouredEvent : UnityEvent<string> { }
@@ -20,10 +20,10 @@ public class PotionReceiver : MonoBehaviour
 
     public void ReceivePotion(string PotionType)
     {
-        if(AcceptedPotionType.Contains(PotionType) && !correctPoured)
+        if(AcceptedPotionType.Contains(PotionType))
         {
             OnPotionPoured.Invoke(PotionType);
-            correctPoured = true;
+            //correctPoured = true;
         }                      
     }
 
