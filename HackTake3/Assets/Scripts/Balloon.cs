@@ -8,10 +8,12 @@ using UnityEngine.Events;
 public class Balloon : MonoBehaviour
 {
     public int timeUntilExplode = 5;
-    ParticleSystem m_ParticlesWhenExplode;
-    private void Start()
+    public ParticleSystem particles;
+    //public UnityEvent OnBalloonExplode;
+
+    private void Awake()
     {
-        m_ParticlesWhenExplode = GetComponent<ParticleSystem>();
+        particles.gameObject.SetActive(false);
     }
 
     internal void OnLaserStart()
@@ -26,14 +28,10 @@ public class Balloon : MonoBehaviour
 
     void Explode()
     {
-        Debug.Log("Партиклы");
-        if (m_ParticlesWhenExplode != null)
-        {
-            Debug.LogError("<<<<EXPLODE>>>>>>");
-            
-            m_ParticlesWhenExplode.Play();
-        }
-            
+        Debug.LogError("<<<<EXPLODE>>>>>>");
         gameObject.SetActive(false);
+        particles.gameObject.SetActive(true);
+        particles.Play();
+        
     }
 }
